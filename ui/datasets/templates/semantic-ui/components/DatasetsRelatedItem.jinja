@@ -1,0 +1,15 @@
+{# def d, level=0 #}
+
+<ITableField d={md.itemEndPage} level={level}/>
+<ITableField d={md.itemIssue} level={level}/>
+<ITableField d={md.itemPublisher} level={level}/>
+<ITableField d={md.itemStartPage} level={level}/>
+<ITableField d={md.itemTitle} level={level}/>
+<ITableField d={md.itemURL} level={level}/>
+<ITableField d={md.itemVolume} level={level}/>
+<ITableField d={md.itemYear} level={level}/>
+<DatasetsContributor d={md.itemContributors} level={level+1}/>
+<DatasetsCreator d={md.itemCreators} level={level+1}/>
+<DatasetsNrObjectPid d={md.itemPIDs} level={level+1}/>
+<IVocabularyItem d={md.itemRelationType} level={level+1}/>
+<IVocabularyItem d={md.itemResourceType} level={level+1}/>

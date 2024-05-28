@@ -1,0 +1,115 @@
+{# def d #}
+{% set md=d.metadata %}
+
+<table class='ui compact definition table'>
+  <ITableField d={md.dateAvailable} />
+  <ITableField d={md.dateCollected} />
+  <ITableField d={md.dateCreated} />
+  <ITableField d={md.dateIssued} />
+  <ITableField d={md.dateValidTo} />
+  <ITableField d={md.notes} >
+    <ITableArrayValue d={md.notes} />
+  </ITableField>
+  <ITableField d={md.originalRecord} />
+  <ITableField d={md.title} />
+  <ITableField d={md.version} />
+  {% for item in array(md.abstract) %}
+    <ITableSection d={item} >
+      <DatasetsMultilingual d={item} />
+    </ITableSection>
+  {% endfor %}
+  <ITableSection d={md.accessRights} >
+    <IVocabularyItem d={md.accessRights} />
+  </ITableSection>
+  {% for item in array(md.accessibility) %}
+    <ITableSection d={item} >
+      <DatasetsString d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.additionalTitles) %}
+    <ITableSection d={item} >
+      <DatasetsAdditionaltitle d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.contributors) %}
+    <ITableSection d={item} >
+      <DatasetsContributor d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.creators) %}
+    <ITableSection d={item} >
+      <DatasetsCreator d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.events) %}
+    <ITableSection d={item} >
+      <DatasetsIdentifier d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.fundingReferences) %}
+    <ITableSection d={item} >
+      <DatasetsFundingReference d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.geoLocations) %}
+    <ITableSection d={item} >
+      <DatasetsGeolocation d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.languages) %}
+    <ITableSection d={item} >
+      <IVocabularyItem d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.methods) %}
+    <ITableSection d={item} >
+      <DatasetsMultilingual d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.objectIdentifiers) %}
+    <ITableSection d={item} >
+      <DatasetsNrObjectPid d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.publishers) %}
+    <ITableSection d={item} >
+      <ITaxonomyItem d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.relatedItems) %}
+    <ITableSection d={item} >
+      <DatasetsRelatedItem d={item} />
+    </ITableSection>
+  {% endfor %}
+  <ITableSection d={md.resourceType} >
+    <IVocabularyItem d={md.resourceType} />
+  </ITableSection>
+  <ITableSection d={md.rights} >
+    <IVocabularyItem d={md.rights} />
+  </ITableSection>
+  {% for item in array(md.series) %}
+    <ITableSection d={item} >
+      <DatasetsSeries d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.subjectCategories) %}
+    <ITableSection d={item} >
+      <IVocabularyItem d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.subjects) %}
+    <ITableSection d={item} >
+      <DatasetsSubject d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.systemIdentifiers) %}
+    <ITableSection d={item} >
+      <DatasetsIdentifier d={item} />
+    </ITableSection>
+  {% endfor %}
+  {% for item in array(md.technicalInfo) %}
+    <ITableSection d={item} >
+      <DatasetsMultilingual d={item} />
+    </ITableSection>
+  {% endfor %}
+</table>
